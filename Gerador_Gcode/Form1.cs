@@ -16,5 +16,12 @@ namespace Gerador_Gcode
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = new Bitmap(Bitmap.FromFile(@"C:\Users\pcp02\Desktop\plaqueta.png"));
+            string str = GCodeGenerator.GenerateGCode(bmp);
+            textBox2.Text = str;
+        }
     }
 }
